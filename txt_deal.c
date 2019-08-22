@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include "txt_deal.h"
 
+Pprovice_six g_provice_info = NULL;
+int info_count = 0;
+
 #if 0
 #define NUMBER 3468
 #define ID 7
@@ -95,8 +98,12 @@ int read_file()
         temp = strlen(provice_info[i].provice_name);
         if(temp>=max_length)
             max_length = temp;
+
+        #if 0
         printf("[%d] %s", i, provice_info[i].provice_name);
         printf("[%s]", provice_info[i].provice_id );
+        #endif
+
         memset(provice_string, 0, ALL_LENGTH );
         i++;
     }
@@ -105,7 +112,7 @@ int read_file()
     printf("max:%d\n", max_length);
     printf("read over, the number of the provice_info is %d. \n", i);
     fclose(fp);
-    system("pause");
+    //system("pause");
     return 0;
 }
 
@@ -135,8 +142,11 @@ int write_file()
     return 0;
 }
 
+#if 0
 int main()
 {
     read_file();
     write_file();
+    system("pause");
 }
+#endif
