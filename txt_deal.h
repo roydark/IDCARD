@@ -14,7 +14,9 @@ typedef struct _str_provice_six
     char *provice_name;
 }Str_provice_six, *Pprovice_six;
 
-Pprovice_six g_provice_info = NULL;
-int info_count = 0;
+extern Pprovice_six g_provice_info;
+extern int info_count;
 
+int read_file();
+int write_file();
 #endif
