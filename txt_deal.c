@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "txt_deal.h"
 
+#if 0
 #define NUMBER 3468
 #define ID 7
 #define PLACE 78
@@ -17,6 +19,7 @@ typedef struct _str_provice_six
 
 Pprovice_six g_provice_info = NULL;
 int info_count = 0;
+#endif
 
 int read_file()
 {
